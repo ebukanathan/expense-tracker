@@ -1,10 +1,9 @@
 import React from "react";
-import user from "../assets/user.png";
 
-function ExpenseCard() {
+function ExpenseCard({ src }) {
   return (
-    <div className="flex gap-2 justify-start p-2 bg-[#fff] rounded-lg ">
-      <img src={user} alt="" className="w-[40px] h-[40px]" />
+    <div className="flex gap-2 justify-start  items-center p-2 bg-[#fff] rounded-lg ">
+      <img src={src} alt="" className="w-[30px]" />
       <div className="flex flex-col items-start">
         <p className="font-thin text-xs  text-left">22 August</p>
         <h4 className="font-semibold text-xs text-left">
