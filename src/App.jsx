@@ -11,6 +11,7 @@ import linkein from "./assets/linkedin.png";
 import office from "./assets/office.png";
 import netflix from "./assets/netflix.png";
 import youtube from "./assets/social.png";
+import user from "./assets/user.png";
 
 function App() {
   return (
@@ -70,7 +71,7 @@ function App() {
             <CategoryCard src={investment} />
 
             <CategoryCard src={transport} />
-            <CategoryCard src={transport} />
+            <CategoryCard src={user} />
 
             <CategoryCard src={health} />
 
@@ -79,7 +80,7 @@ function App() {
         </div>
         <div className="w-full flex flex-col gap-2 md:w-1/3 ">
           <div className="">
-            <h3 className="font-semibold text-lg text-left">
+            <h3 className="font-semibold text-lg text-left mb-2">
               Upcoming Expenses
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -91,7 +92,7 @@ function App() {
           </div>
 
           <div className="">
-            <h3 className="font-semibold text-lg text-left">
+            <h3 className="font-semibold text-lg text-left mb-2">
               Recent Transaction
             </h3>
             <div className="grid grid-cols-1 gap-2">
