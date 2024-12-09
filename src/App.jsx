@@ -16,12 +16,12 @@ import user from "./assets/user.png";
 function App() {
   return (
     <>
-      <div className="flex flex-col gap-4 m-2  justify-center items-center md:flex-row">
-        <div className="flex w-[400px] bg-[#fff] relative bg-yellow-200 justify-around items-center rounded-lg">
-          <div className=" h-[200px]  w-[200px] absolute left-[-20px]  rounded-[100px] bg-cyan-300 border-0">
+      <div className="w-9/10 mx-auto grid grid-cols-1 gap-10 m-2 md:grid-cols-3 ">
+        <div className="flex  bg-[#fff]  bg-yellow-200 justify-between items-center rounded-lg">
+          <div className="w-[200px] h-[200px]   rounded-[100px] bg-cyan-300 border-0">
             <img src="" alt="" />
           </div>
-          <div className=" flex flex-col ml-6 justify-start items-start my-2">
+          <div className=" flex flex-col  w-1/2 ml-6 justify-start items-start my-2">
             <h3 className="font-thin text-base">Good Morning,</h3>
             <h3 className="font-semibold text-lg">Sophie Campbell</h3>
             <p className="font-thin text-xs">22 august Thursday</p>
@@ -32,11 +32,11 @@ function App() {
             <p className="font-thin text-xs">04 weekends & Holidays</p>
           </div>
         </div>
-        <div className="w-[400px]   bg-[#fff]  rounded-lg p-2">
+        <div className="bg-[#fff]  rounded-lg p-2">
           <h3 className="font-semibold text-lg text-left">Budget Vs Expense</h3>
           <p className="font-thin text-xs  text-left">from 01-22 August</p>
         </div>
-        <div className="w-[400px]  bg-[#fff]  rounded-lg p-2">
+        <div className="bg-[#fff]  rounded-lg p-2">
           <h3 className="font-semibold text-lg text-left">
             Expense Distribution
           </h3>
@@ -57,9 +57,9 @@ function App() {
         </div>
       </div>
       {/* section two */}
-      <div className="flex flex-col justify-center gap-2 md:flex-row">
+      <div className=" w-9/10 mx-auto flex flex-col justify-center gap-2 md:flex-row">
         <div className=" w-full md:w-2/3">
-          <h3 className="font-semibold text-lg text-left">
+          <h3 className="font-semibold text-lg pl-4 text-left">
             Category wise Expenses
           </h3>
           <div className="grid  grid-cols-2 gap-4 p-4 md:grid-cols-4">
