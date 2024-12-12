@@ -12,16 +12,21 @@ import office from "./assets/office.png";
 import netflix from "./assets/netflix.png";
 import youtube from "./assets/social.png";
 import user from "./assets/user.png";
+import { useState } from "react";
 
 function App() {
+  const [add, setAdd] = useState(true);
   return (
     <>
       <div className="w-9/10 mx-auto grid grid-cols-1 gap-10 m-2 md:grid-cols-3 ">
-        <div className="flex  bg-[#fff]  bg-yellow-200 justify-between items-center rounded-lg">
-          <div className="w-[200px] h-[200px]   rounded-[100px] bg-cyan-300 border-0">
+        <div className="flex  bg-[#fff]  justify-between items-center rounded-lg">
+          <div className="w-[200px] h-[20 0px]   rounded-[100px] bg-cyan-300 border-0">
             <img src="" alt="" />
           </div>
           <div className=" flex flex-col  w-1/2 ml-6 justify-start items-start my-2">
+            <button className="text-sm" onClick={() => alert("add expenses")}>
+              add expenses
+            </button>
             <h3 className="font-thin text-base">Good Morning,</h3>
             <h3 className="font-semibold text-lg">Sophie Campbell</h3>
             <p className="font-thin text-xs">22 august Thursday</p>
