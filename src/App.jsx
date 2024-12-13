@@ -13,20 +13,30 @@ import netflix from "./assets/netflix.png";
 import youtube from "./assets/social.png";
 import user from "./assets/user.png";
 import { useState } from "react";
+import AddModal from "./components/AddModal";
 
 function App() {
-  const [add, setAdd] = useState(true);
+  const [add, setAdd] = useState(false);
   return (
     <>
+      {add && <AddModal onClick={() => setAdd((c) => !c)} />}
       <div className="w-9/10 mx-auto grid grid-cols-1 gap-10 m-2 md:grid-cols-3 ">
         <div className="flex  bg-[#fff]  justify-between items-center rounded-lg">
           <div className="w-[200px] h-[20 0px]   rounded-[100px] bg-cyan-300 border-0">
             <img src="" alt="" />
           </div>
           <div className=" flex flex-col  w-1/2 ml-6 justify-start items-start my-2">
-            <button className="text-sm" onClick={() => alert("add expenses")}>
-              add expenses
-            </button>
+            <div className="flex gap-1 m-2">
+              <button
+                className="text-sm bg-blue-800 text-white p-1 rounded-lg capitalize hover:opacity-75"
+                onClick={() => setAdd((c) => !c)}
+              >
+                add expenses
+              </button>
+              <button className="text-sm bg-red-800 text-white p-1 rounded-lg capitalize hover:opacity-75">
+                add Budget
+              </button>
+            </div>
             <h3 className="font-thin text-base">Good Morning,</h3>
             <h3 className="font-semibold text-lg">Sophie Campbell</h3>
             <p className="font-thin text-xs">22 august Thursday</p>
