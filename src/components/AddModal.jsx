@@ -9,13 +9,13 @@ function AddModal({ onClick }) {
       <div className="w-1/3 bg-white text-black rounded-lg p-6 ">
         <div className="text-2xl text-center mb-4">Add Expenses</div>
         <form action="" className="flex flex-col ">
-          <div className=" flex justify-start  gap-2 w-3/4 mx-auto">
+          <div className=" flex  flex-col justify-start  gap-2 w-[100%] mx-auto md:flex-row w-[75%]">
             <label htmlFor="" className="text-xl">
               expenses
             </label>
             <input type="text" className="border-2 rounded-md p-1  mb-3" />
           </div>
-          <div className=" flex justify-start gap-2 w-3/4 mx-auto">
+          <div className=" flex flex-col justify-start gap-2 w-[100%] mx-auto md:flex-row w-[75%]">
             <label htmlFor="" className="text-xl">
               Category
             </label>
@@ -31,7 +31,7 @@ function AddModal({ onClick }) {
               <option value="">Transportation</option>
             </select>
           </div>
-          <div className="flex justify-start gap-2 w-3/4 mx-auto">
+          <div className="flex  flex-col justify-start gap-2 w-[100%] mx-auto md:flex-row w-[75%]">
             <label htmlFor="" className="text-xl">
               Amount
             </label>
