@@ -20,17 +20,41 @@ import ExpenseDistribution from "./components/ExpenseDistribution";
 
 function App() {
   const [add, setAdd] = useState(false);
+  const [categories, setCategories] = useState([
+    "Bills and Utility",
+    "Food",
+    "Personal",
+    "Healthcare",
+    "Education",
+    "Transport",
+    "Investment",
+    "Other",
+  ]);
+
+  const bill = [
+    { tag: house, categ: "housing", amount: 3500 },
+    { tag: transport, categ: "transport", amount: 3000 },
+    { tag: health, categ: "health", amount: 3000 },
+    { tag: investment, categ: "Investment", amount: 3000 },
+    { tag: food, categ: "food", amount: 3000 },
+    { tag: office, categ: "office", amount: 3000 },
+    { tag: transport, categ: "transport", amount: 3000 },
+  ];
+
+  const [expenses, setExpenses] = useState(bill);
+  console.log(expenses);
 
   const handleTOggle = () => {
     setAdd((c) => !c);
   };
+
   return (
     <>
-      {add && <AddModal onClick={handleTOggle} />}
+      {add && <AddModal onClick={handleTOggle} categories={categories} />}
       <div className="w-9/10 mx-auto grid grid-cols-1 gap-10 m-2 md:grid-cols-3 ">
         <Summary onClick={handleTOggle} />
         <BudgetVsExpenses />
-        <ExpenseDistribution />
+        <ExpenseDistribution categories={categories} />
       </div>
       {/* section two */}
       <div className=" w-9/10 mx-auto flex flex-col justify-center gap-2 md:flex-row">
@@ -39,7 +63,15 @@ function App() {
             Category wise Expenses
           </h3>
           <div className="grid  grid-cols-2 gap-4 p-4 md:grid-cols-4">
-            <CategoryCard src={house} />
+            {bill?.map((item, index) => (
+              <CategoryCard
+                key={index}
+                tag={item.tag}
+                categ={item.categ}
+                amount={item.amount}
+              />
+            ))}
+            {/* <CategoryCard src={house} />
             <CategoryCard src={food} />
 
             <CategoryCard src={health} />
@@ -51,7 +83,7 @@ function App() {
 
             <CategoryCard src={health} />
 
-            <CategoryCard src={food} />
+            <CategoryCard src={food} /> */}
           </div>
         </div>
         <div className="w-full flex flex-col gap-2 md:w-1/3 ">

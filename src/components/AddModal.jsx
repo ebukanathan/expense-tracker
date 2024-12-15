@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddModal({ onClick }) {
+function AddModal({ onClick, categories }) {
   return (
     <div
       className=" fixed inset-0 min-h-screen flex justify-center items-center bg-[rgba(0,0,0,0.5)]"
@@ -24,11 +24,16 @@ function AddModal({ onClick }) {
               id=""
               className="border-2 rounded-md p-1 mb-3 w-[100%]"
             >
-              <option value="">Food</option>
+              {/* <option value="">Food</option>
               <option value="">Bills and Utility</option>
               <option value="">Health</option>
               <option value="">Personal</option>
-              <option value="">Transportation</option>
+              <option value="">Transportation</option> */}
+              {categories.map((item, index) => (
+                <option key={index} value="">
+                  {item}
+                </option>
+              ))}
             </select>
           </div>
           <div className="flex  flex-col justify-start gap-2 w-[100%] mx-auto md:flex-row w-[75%]">
